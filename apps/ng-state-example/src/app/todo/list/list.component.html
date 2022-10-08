@@ -1,1 +1,8 @@
 <p>list works!</p>
+
+<ng-container *ngIf="toDosViewModel$ | async as toDoViewModel">
+  <h1 class="text-lg text-blue-900 unterline">ToDos</h1>
+  <div *ngFor="let toDo of toDoViewModel.list" class="shadow p-4">
+    <div>{{ toDo.title }}</div>
+  </div>
+</ng-container>

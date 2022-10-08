@@ -1,4 +1,10 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { createSelector, Store } from '@ngrx/store';
+import { selectToDos } from '../todo.selectors';
+
+import * as actions from './actions';
+
+const todoListViewModel = createSelector(selectToDos, (list) => ({ list }));
 
 @Component({
   selector: 'nx-playground-list',
@@ -6,8 +12,9 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ListComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
+export class ListComponent {
+  toDosViewModel$ = this.store.select(todoListViewModel);
+  constructor(private readonly store: Store) {
+    store.dispatch(actions.toDosOpened());
+  }
 }

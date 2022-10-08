@@ -38,6 +38,10 @@ nx generate @nrwl/angular:application ng-state-example --style=scss --addTailwin
 - Global state
 - Component state
 
+```bash
+npm i -s @ngrx/effects @ngrx/entity @ngrx/router-store @ngrx/store @ngrx/store-devtools 
+```
+
 ## Styling you app with TailwindCSS
 
 - Basic concept
