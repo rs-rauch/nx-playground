@@ -1,8 +1,21 @@
-<p>list works!</p>
-
 <ng-container *ngIf="toDosViewModel$ | async as toDoViewModel">
-  <h1 class="text-lg text-blue-900 unterline">ToDos</h1>
-  <div *ngFor="let toDo of toDoViewModel.list" class="shadow p-4">
-    <div>{{ toDo.title }}</div>
+  <div class="wrapper p-4">
+    <h1 class="text-xl font-bold text-blue-900 unterline">ToDos</h1>
+    <div class="list flex flex-col gap-2">
+      <a
+        *ngFor="let toDo of toDoViewModel.list"
+        [routerLink]="['/todo', toDo.id]"
+        class="shadow p-4 rounded-sm hover:shadow-lg hover:cursor-pointer hover:rounded transition-all group"
+      >
+        <div class="inline-flex w-full justify-between">
+          <p>{{ toDo.title }}</p>
+          <div
+            class="actions opacity-0 transition-opacity duration-200 group-hover:opacity-80 font-light italic"
+          >
+            Delete
+          </div>
+        </div>
+      </a>
+    </div>
   </div>
 </ng-container>
