@@ -33,7 +33,7 @@
 		"editor.formatOnPaste": false,
 		"editor.formatOnSave": true,
 		/*
-		 * Don't use the value "modificationsIfAvailable" for now, because there is a bug in the extension prettier that 
+		 * Don't use the value "modificationsIfAvailable" for now, because there is a bug in the extension prettier that
 		 * causes the prettier to add unnecessary semicolons, see https://github.com/prettier/prettier/issues/12964
 		 */
 		"editor.formatOnSaveMode": "file",
@@ -176,27 +176,12 @@
 		"streetsidesoftware.code-spell-checker-german",
 		//GitHub Copilot
 		"GitHub.copilot",
-		/*
-		 * Excluded Extensions:
-		 *
-		 * XML Tools (dotjoshjohnson.xml)
-		 * The xml formatting of dotnet project files doesn't work with this extension.
-		 *
-		 * Todo Tree (gruntfuggly.todo-tree)
-		 * This extension makes intelli sense slow.
-		 *
-		 * Debugger for Microsoft Edge (msjsdiag.debugger-for-edge)
-		 * This extension is not needed.
-		 *
-		 * C# Format Usings (gaoshan0621.csharp-format-usings)
-		 * This extension is not needed.
-		 *
-		 * EditorConfig for VS Code (editorconfig.editorconfig)
-		 * This extension is not needed.
-		 *
-		 * VS Sharper for C# (eservice-online.vs-sharper)
-		 * Creates files with CRLF lines endings. There is no way to changed the lines endings.
-		 */
-		"nrwl.angular-console"
+		// NX Extensions
+		"nrwl.angular-console",
+		"dbaeumer.vscode-eslint",
+		"nrwl.angular-console",
+		"hardikpthv.NgRxSnippets",
+		// Git tree compare
+		"letmaik.git-tree-compare"
 	]
 }

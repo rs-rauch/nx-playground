@@ -27,6 +27,10 @@
 nx generate @nrwl/angular:application --help
 ```
 
+```bash
+nx generate @nrwl/angular:application ng-state-example --style=scss --addTailwind --routing --standalone --standaloneConfig --no-interactive
+```
+
 ## NGRX - Reactive State for Angular
 
 - What is state?
