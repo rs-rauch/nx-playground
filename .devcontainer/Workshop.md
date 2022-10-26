@@ -6,6 +6,8 @@
 - Simple setup
 - No need to change the node version ever again
 
+- Extension walk through
+
 ## NX - What and why?
 
 - Intro
